@@ -73,7 +73,7 @@ class crud
  
   if($stmt->rowCount()>0)
   {
-   while($row=$stmt->fetch(PDO::FETCH_ASSOC))
+   while($row=$stmt->fetch(PDO::FETCH_ASSOC)) 
    {
     ?>
                 <tr>
@@ -81,10 +81,10 @@ class crud
                 <td><?php print($row['nom']); ?></td>
                 <td><?php print($row['prenom']); ?></td>
                 <td align="center">
-                <a href="edit_contact.php?edit_id=<?php print($row['id']); ?>"type="button" class="btn btn-primary"> Update <i class="glyphicon glyphicon-edit"></i></a>
+                <a href="edit_contact.php?edit_id=<?php print($row['id']); ?>"type="button" class="btn btn-primary"> Update </a>
                 </td>
                 <td align="center">
-                <a href="delete_contact.php?delete_id=<?php print($row['id']); ?>"type="button" class="btn btn-danger"> Delete <i class="glyphicon glyphicon-remove-circle"></i></a>
+                <a href="delete_contact.php?delete_id=<?php print($row['id']); ?>"type="button" class="btn btn-danger"> Delete </a>
                 </td>
                 </tr>
                 <?php
@@ -121,10 +121,10 @@ public function rechere($value)
                <td><?php print($row['nom']); ?></td>
                <td><?php print($row['prenom']); ?></td>
                <td align="center">
-               <a href="edit_contact.php?edit_id=<?php print($row['id']); ?>"type="button" class="btn btn-primary"> Update <i class="glyphicon glyphicon-edit"></i></a>
+               <a href="edit_contact.php?edit_id=<?php print($row['id']); ?>"type="button" class="btn btn-primary"> Update </a>
                </td>
                <td align="center">
-               <a href="delete_contact.php?delete_id=<?php print($row['id']); ?>"type="button" class="btn btn-danger"> Delete <i class="glyphicon glyphicon-remove-circle"></i></a>
+               <a href="delete_contact.php?delete_id=<?php print($row['id']); ?>"type="button" class="btn btn-danger"> Delete </a>
                </td>
                </tr>
                <?php

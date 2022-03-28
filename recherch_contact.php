@@ -23,21 +23,12 @@ include_once 'connexion.php';
      <th colspan="2" align="center">Actions</th>
      </tr>
      <?php
-  $query = "SELECT * FROM info";       
-  
-  $records_per_page=3;
-  $newquery = $crud->paging($query,$records_per_page);
-  $crud->dataview($newquery);
+//   $query = "SELECT * FROM info";  
+$nom = $_GET['rech'];
+
+$query=$crud->rechere($nom);
   ?>
-    <tr>
-        <td colspan="7" align="center">
-    <div class="pagination-wrap">
-            <?php $crud->paginglink($query,$records_per_page); ?> 
-         </div>
 
-
-        </td>
-    </tr>
  
 </table>
    

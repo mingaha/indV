@@ -81,14 +81,14 @@ if(isset($_GET['delete_id']))
    <form method="post">
     <input type="hidden" name="id" value="<?php echo $row['id']; ?>" />
     <button class="btn btn-large btn-primary" type="submit" name="btn-del"><i class="glyphicon glyphicon-trash"></i> &nbsp; YES</button>
-    <a href="index.php" class="btn btn-large btn-success"><i class="glyphicon glyphicon-backward"></i> &nbsp; NO</a>
+    <a href="index.php" class="btn btn-large btn-success"> &nbsp; NO</a>
     </form>  
  <?php
 }
 else
 {
  ?>
-    <a href="index.php" class="btn btn-large btn-success"><i class="glyphicon glyphicon-backward"></i> &nbsp; Back to index</a>
+    <a href="index.php" class="btn btn-large btn-success"></i> &nbsp; Back to index</a>
     <?php
 }
 ?>

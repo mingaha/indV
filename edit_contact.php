@@ -63,9 +63,9 @@ if(isset($msg))
         <tr>
             <td colspan="2">
                 <button type="submit" class="btn btn-primary" name="btn-update">
-       <span class="glyphicon glyphicon-edit"></span>  update
+     update
     </button>
-                <a href="index.php" class="btn btn-large btn-success"><i class="glyphicon glyphicon-backward"></i> &nbsp; CANCEL</a>
+                <a href="index.php" class="btn btn-large btn-success"> &nbsp; CANCEL</a>
             </td>
         </tr>
  
