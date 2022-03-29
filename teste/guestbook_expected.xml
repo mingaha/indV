@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<dataset>
+    <info id="1" nom="thomas" prenom="Kerala, India"  />
+    <info id="2" nom="anna" prenom="TN, India"  /> 
+    <info id="3" nom="George" prenom="AP, India"  /> 
+</dataset>

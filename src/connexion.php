@@ -16,7 +16,7 @@ catch(PDOException $e)
  echo $e->getMessage();
 }
 
-include_once 'class.crud.php';
+include_once 'classCrud.php';
 
 $crud = new crud($DB_con);
 
