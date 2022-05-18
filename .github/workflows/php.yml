@@ -13,10 +13,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-
-      
-    - name: install composer
-      run: composer install 
       
     - name: install phpunit
       run: composer require --dev phpunit/phpunit  
