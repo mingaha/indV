@@ -13,12 +13,5 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+ 
       
-    - name: install phpunit
-      run: composer require --dev phpunit/phpunit  
-      
-    - name: update composer
-      run: composer update
-      
-    - name: test
-      run: composer exec phpunit php . teste/classcrudTest.php
