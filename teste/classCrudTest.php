@@ -39,44 +39,37 @@ use PHPUnit\DbUnit\TestCaseTrait;
     public function testRowCount() {
         $this->assertSame(2, $this->getConnection()->getRowCount('info'), "Pre-Condition");
     }
+
+    private static $bdd;
+  
+    public function testConnexion()
+    {
+       // $connexion = new connexionTest();
+        self::$bdd=new PDO('sqlite:contact.db');
+        $this->expectException(Exception::class);
+        throw new Exception("erreur",0);
+    }
+
+    public function testtearDownAfterClass()
+    {
+        $bdd = null;
+        $this->assertEquals(null, $bdd);
+    }
  
-    // public function testAddGuest() {
+    // public function testAdd() {
+    //     $DB_con = new PDO('sqlite:contact.db');
  
-    //     $guestbook = new GuestBook();
-    //     $guestbook->addGuest("George", "AP, India", "4545");
+     
+    //     $stmt1 = $this->$DB_con->prepare("INSERT INTO info(nom,prenom) VALUES(moi,toi)");
+    //     $stmt1->execute();
+
+    //     $stmt = $this->$DB_con->prepare("SELECT * FROM info");
+    //    $list=$stmt->execute();
  
-    //     $queryTable = $this->getConnection()->createQueryTable(
-    //         'guestbook', 'SELECT id, name, address, phone FROM guestbook'
-    //     );
- 
-    //     $expectedTable = $this->createFlatXmlDataSet("./tests/guestbook_expected.xml")
-    //                           ->getTable("guestbook");
- 
-    //     $this->assertTablesEqual($expectedTable, $queryTable);
+    //    $this->assertEquals(1,$list);
  
     // }
  
-
-
-
-    // // only instantiate pdo once for test clean-up/fixture load
-    // static private $pdo = null;
-
-    // // only instantiate PHPUnit\DbUnit\Database\Connection once per test
-    // private $conn = null;
-
-    // final public function getConnection()
-    // {
-    //     if ($this->conn === null) {
-    //         if (self::$pdo == null) {
-    //             self::$pdo = new PDO('sqlite::memory:');
-    //         }
-    //         $this->conn = $this->createDefaultDBConnection(self::$pdo, ':memory:');
-    //     }
-
-    //     return $this->conn;
-    // }
-
 
 
     // use TestCaseTrait;
