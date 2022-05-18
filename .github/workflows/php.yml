@@ -13,9 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    
-    - name: install composer init
-      run: composer require
+
       
     - name: install composer
       run: composer install 
