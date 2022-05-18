@@ -16,4 +16,4 @@ jobs:
  
       
     - name: test
-      run: composer exec phpunit php . teste/classcrudTest.php
+      run: php ./vendor/phpunit/phpunit/phpunit teste/classcrudTest.php
