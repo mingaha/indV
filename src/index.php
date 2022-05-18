@@ -23,6 +23,7 @@ include_once 'connexion.php';
      <th colspan="2" align="center">Actions</th>
      </tr>
      <?php
+
   $query = "SELECT * FROM `info`";       
   $records_per_page=3;
   $newquery = $crud->paging($query,$records_per_page);
@@ -39,7 +40,7 @@ include_once 'connexion.php';
     </tr>
  
 </table>
-   
+
        
 </div>
 

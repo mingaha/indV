@@ -71,8 +71,10 @@ class crud
      
   $stmt = $this->db->prepare($query);
   $stmt->execute();
-  var_dump($stmt->rowCount());
-  if($stmt->rowCount()>0)
+
+
+//   if($stmt->rowCount()>0)
+  if($stmt->fetch(PDO::FETCH_ASSOC)>0)
   { 
      
    while($row=$stmt->fetch(PDO::FETCH_ASSOC)) 
@@ -113,9 +115,10 @@ public function rechere($value)
  $stmt->bindparam(":val",$value);
  $stmt->execute();
 
-
- if($stmt->rowCount()>0)
+//   if($stmt->rowCount()>0)
+if($stmt->fetch(PDO::FETCH_ASSOC)>0)
  {
+    
   while($row=$stmt->fetch(PDO::FETCH_ASSOC))
   {
    ?>
@@ -207,6 +210,13 @@ public function rechere($value)
 
 
 //  recheche
+
+
+
+
+
+
+
 
  
 }
